@@ -8,7 +8,7 @@ LLMと一緒にタスクを進めるときの進め方について。
 | 読む順 | 文書 | 内容 |
 |---|---|---|
 | 1 | [issue.md](issue.md) | 背景と解決したいこと |
-| 2 | **[policy.md](policy.md)** | **規約の確定形(第3版)。各リポジトリの `CLAUDE.md` に貼るスニペットは §11** |
+| 2 | **[policy.md](policy.md)** | **規約の確定形。各リポジトリの `AGENTS.md` に貼るスニペットは §11(`CLAUDE.md` には `@AGENTS.md` の1行)** |
 | 3 | [proposal.md](proposal.md) | 導出の経緯。規約として読まない |
 | 4 | [review.md](review.md) | 独立レビューの指摘と裁定。撤回した主張の記録 |
 
