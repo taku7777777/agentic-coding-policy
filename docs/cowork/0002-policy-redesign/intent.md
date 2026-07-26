@@ -1,0 +1,5 @@
+- なぜ: LLM協働の成果物が散乱し権威の所在が不明になる問題を、規約(policy.md)で解消するため
+- 何を: policy.md 第4版への第4巡レビューと第5版への改訂、metsuke への配布(§12 パイロット開始)
+- やらないこと: 既存散乱の移行(§1)。リポジトリ改名の判断
+- 触る範囲: policy.md / review.md / proposal.md / issue.md / work/、および metsuke の AGENTS.md・CLAUDE.md
+- 完了条件: 第5版がコミットされ、metsuke に v5 スニペットが配布され、§12 の観測が開始されていること
