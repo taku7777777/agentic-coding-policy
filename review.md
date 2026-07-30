@@ -333,7 +333,8 @@ archived/
 
 - ブランチ `0002-policy-redesign` を master へ ff 統合。注釈付きタグ v3(`4d7996f`)/ v4(`14040cb`)/ v5(`7e64e63`)/ v6(第6版)を付与し、master と全タグを push。統合前に「§11 スニペットブロック == metsuke/AGENTS.md」の完全一致を diff で確認済み
 - 第6版では **§11 のスニペットブロックを変更していない**(版ヘッダは v5 のまま)。配布済み metsuke/AGENTS.md の再配布は不要であり、パイロットの観測条件は変わっていない
-- §12-9 の遡及マーキングを metsuke で実施: `docs/08-dashboard-fb.md` の冒頭メタ行に `種別: 記録` を付与(コミット `2ae04ed` 2026-07-30 20:32)。**artifact-policy の管理作業であり、終了時監査では流出・昇格のいずれにも数えない** —— 補助計装の `md-writes.jsonl` には metsuke/outside の1件として載るため、クロス集計から除外すること
+- §12-9 の遡及マーキングを metsuke で実施: `docs/08-dashboard-fb.md` の冒頭メタ行に `種別: 記録` を付与(コミット `2ae04ed` 2026-07-30 20:32)。**metsuke は PR ベースの運用で、このコミットは作業中の topic ブランチ `docs/auto-gate-denial-observed` 上にある** —— master に届くのはそのブランチがマージされたときで、それまで master 側の同ファイルはマーカー無し(= §2.1 で L 判定)のままである。第5巡-1 で直した「版がブランチに閉じ込められる」故障と同型の窓が開いている。終了時監査でマージ済みかを確認すること。**artifact-policy の管理作業であり、終了時監査では流出・昇格のいずれにも数えない** —— 補助計装の `md-writes.jsonl` には metsuke/outside の1件として載るため、クロス集計から除外すること
+- metsuke `work/2026-07-27-workshop-member-metrics/` を追跡下に置いた(`3d6fb82` 2026-07-31。§7.2「`work/` は commit する」。07-27 から4日間 untracked で唯一のコピーだった)。**これはユーザーの承認を得て実施した**(第5巡の懐疑パネルが未 commit データの自動 commit を禁じたため)
 - `~/.claude/commands/wrap.md` を v5 仕様に更新(完了条件の3要素化・版ヘッダ付与・`head -5` 撤廃)。地の文の版表記は削除し、本体の版表記を参照する形に変えた(二重管理を作らないため)
 - GitHub の description と topics を更新(`llm` / `claude-code` / `codex` / `agents-md` / `documentation`)
 - 観測終了日の単発リマインダを予約(claude.ai の routine `trig_01JyTpK1wHJnSMyC7zLj3Dhr`。2026-08-08 09:00 JST に1回だけ発火し、§12 の終了時監査の手順書を出す)。**規約文は足していない** —— §9 が却下するのは定期棚卸し lint / cron(理由: 保守を要求する)であり、単発予約はそれに該当しないので、許可を明文化する必要がない。リマインダは監査を自動実行せず、§12-2 のとおり承認を促すだけである
