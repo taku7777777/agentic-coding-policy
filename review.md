@@ -336,3 +336,4 @@ archived/
 - §12-9 の遡及マーキングを metsuke で実施: `docs/08-dashboard-fb.md` の冒頭メタ行に `種別: 記録` を付与(コミット `2ae04ed` 2026-07-30 20:32)。**artifact-policy の管理作業であり、終了時監査では流出・昇格のいずれにも数えない** —— 補助計装の `md-writes.jsonl` には metsuke/outside の1件として載るため、クロス集計から除外すること
 - `~/.claude/commands/wrap.md` を v5 仕様に更新(完了条件の3要素化・版ヘッダ付与・`head -5` 撤廃)。地の文の版表記は削除し、本体の版表記を参照する形に変えた(二重管理を作らないため)
 - GitHub の description と topics を更新(`llm` / `claude-code` / `codex` / `agents-md` / `documentation`)
+- 観測終了日の単発リマインダを予約(claude.ai の routine `trig_01JyTpK1wHJnSMyC7zLj3Dhr`。2026-08-08 09:00 JST に1回だけ発火し、§12 の終了時監査の手順書を出す)。**規約文は足していない** —— §9 が却下するのは定期棚卸し lint / cron(理由: 保守を要求する)であり、単発予約はそれに該当しないので、許可を明文化する必要がない。リマインダは監査を自動実行せず、§12-2 のとおり承認を促すだけである
