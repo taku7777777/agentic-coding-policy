@@ -555,7 +555,7 @@ gitignore すると、そのタスクで得た記録がバックアップも共�
 ### 12.2 複製の一覧
 
 版を更新したときに更新する複製: **§11 スニペットブロック / グローバル2枚(`~/.claude/CLAUDE.md` 内の
-ブロック・`~/.codex/AGENTS.md`)/ 公開リポジトリの `AGENTS.md`(現在: `metsuke`・`preference-analyzer`)/
+ブロック・`~/.codex/AGENTS.md`)/ 公開リポジトリの `AGENTS.md`(現在: `metsuke`・`preference-analyzer`・`co-working-workflow`)/
 `~/.claude/commands/wrap.md`(スニペット仕様への参照)**。自リポジトリの `AGENTS.md` は参照設計で
 版ヘッダを持たない(§8 の差分だけを書く)。この一覧は手がかりであって網羅の保証ではない ——
 複製の発見は `grep -rl "artifact-policy v"` で行い、鮮度は内容の diff で判定する(版番号の不一致は
