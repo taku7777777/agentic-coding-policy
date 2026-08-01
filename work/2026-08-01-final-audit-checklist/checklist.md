@@ -31,7 +31,8 @@ policy.md §12-2 の手順と、review.md §11 実施記録・improvement-plan I
 ## 3. 除外・特記事項(review.md §11 実施記録より)
 
 - [ ] `metsuke: docs/08-dashboard-fb.md` へのマーカー付与(`2ae04ed`)は artifact-policy の管理作業 —— **流出・昇格のいずれにも数えない**。md-writes.jsonl の metsuke/outside 1件をクロス集計から除外
-- [ ] `2ae04ed` の master マージ確認(2026-08-01 時点で topic ブランチ `docs/auto-gate-denial-observed` に滞留中。未マージなら master 側の同ファイルはマーカー無し = §2.1 で L 判定のまま)
+- [ ] マーカー付与コミットの本流到達確認 —— **2系統に滞留**(2026-08-01 実測): `2ae04ed` は**マージ済み**ブランチ `docs/auto-gate-denial-observed` 上で合流経路なし / 同一パッチの `d078460` は `feat/cc-cost-peek-share-card` 系列(上に実作業が積まれており、ブランチのマージで自然到達する)。監査時点で origin/master 未到達なら、v7 移行(records/ への git mv)の**前に**処置を確定する(design.md §6-1。先に mv すると rename/modify 衝突で旧パスが復活しうる)
+- [ ] 第6巡の記録に注記: review.md §11 実施記録(07-30)の「作業中の topic ブランチ」は記載時点で既に不正確だった(ブランチは 07-27 マージ済み。一次資料照合レビューの発見5)
 - [ ] 本リポジトリ(agentic-coding-policy)は AGENTS.md 配布済み → **対照群集計から除外**
 - [ ] `metsuke: work/2026-07-27-workshop-member-metrics/` の commit 状態確認(`3d6fb82` 07-31 で追跡済み。以後の新規分が untracked のままでないか)
 - [ ] `metsuke: docs/cowork/0001-workshop-prep-002/intent.md` の完了時マーカー(タスク完了が確認できれば §3.3 を適用)
@@ -39,16 +40,18 @@ policy.md §12-2 の手順と、review.md §11 実施記録・improvement-plan I
 
 ## 4. 監査後の第7版バッチ(前倒し不可。監査と同日に実施)
 
-第7版の**候補**(review.md §11。確定ではない —— 観測結果と突き合わせて第6巡として裁定する):
-射程フィルタ(§2/§3)/ §5.5 優先規則(知見の有無を優先)/ 並列採番・容器新設は親のみ /
-複数リポジトリ跨ぎのポインタ / CHANGELOG の一律 A 指定の限定 / 非文書成果物の昇格経路 /
+**v7 の本体は `work/2026-08-01-records-redesign/design.md`**(L/A 判別のパス一本化。2026-08-01 に
+独立レビュー3本で裁定済み。未裁定2点は同 §11)。旧候補のうち records 設計が吸収・解消するもの
+(射程フィルタ / 並列採番 / CHANGELOG / 非文書昇格 / §5.6)は同設計 §7 の表に従う。
+**影響を受けない候補は従来どおり第6巡で裁定する**(黙って落とさない):
+§5.5 優先規則(知見の有無を優先 —— 候補中の最有力)/ 複数リポジトリ跨ぎのポインタ /
 slug 語彙の再利用 / §7.1 第4条件(自分以外の書き込み)/ 版履歴・単発リマインダの扱い
 
 確定分:
 
 - [ ] 終了時監査の結果を **review.md 第6巡**として記録し、§12-5 の3値判定を確定する
-- [ ] 複製の全数更新(§12-8): §11 スニペット → v7 / `metsuke/AGENTS.md` / `~/.claude/commands/wrap.md`。
-  自リポジトリ AGENTS.md は版ヘッダを持たない参照設計(第5巡-9)のため、§8 記述と食い違わない限り更新不要
+- [ ] 複製の全数更新(§12-8): §11 スニペット → v7 / `metsuke/AGENTS.md` / `~/.claude/commands/wrap.md` /
+  **自リポジトリ AGENTS.md(全面改稿 —— 現行はマーカー方式・直下 A を規定しており records 設計と確実に食い違う。2026-08-01 レビュー M6)**
 - [ ] **改名の残存参照4箇所を新名に更新**(2026-08-01 追加。review.md §11 実施記録の裁定):
   policy.md §11 スニペットヘッダ / `metsuke/AGENTS.md:1` / `wrap.md:5・7` / `artifact-policy-log.sh:2`
 - [ ] 本体ポインタの **URL 化を検討**: `github.com/taku7777777/agentic-coding-policy`
