@@ -38,3 +38,20 @@
   保留理由はすべて**未コミット/進行中の作業との衝突回避**(§12.1 の「先に合流させてから移行する」の適用)
 - 保留4件の再開時チェックリスト: self-analysis(commit 後に移行)/ muti-repo-workspace(合流後に導入)/
   claude-code-sandbox-experiments(再開時に導入+PUBLIC につき配布も)/ co-working(Run 1 完了後に移行)
+
+## 追記(2026-08-02): sekisho §12.1 移行の実施
+
+全数55本の内容判定(生データ: `work/2026-08-02-github-sweep/sekisho-survey.md`)により
+**容器外 A 39本を `docs/records/` へ移行**した。活動中11本(README / 00-final / 01-decision-log /
+11・15・20・21 / p4-findings / p4-m3-plan / p5-plan / runbook)は除外。境界の裁定:
+design/README.md は **L の文書表として残置**(§9。リンクのみ records/ へ更新)/
+**design/16〜19 は正文15(P4-M3 進行中)の凍結後にクラスタ一括移行**として保留。
+
+- 実施は事実上の幹 **sekisho-m1 上**: rename 39件は並行セッションのコミット `30d61ff` に混入して
+  先行到達(git mv の index を並行コミットが拾った。共有ブランチのため履歴書き換えせず受容)、
+  内容側(`日付:` 遡及付与・リンク機械修正・L 側参照更新)は `c33d401`。
+  リンク検証: 相対 md リンク504件中 broken は移行前からの既存2件のみ
+- 教訓: **並行セッション稼働中のリポジトリでは git mv(自動ステージ)とコミットの間に
+  他者のコミットが挟まると rename が混入する**。次回は「mv → 即コミット」を1手で行うか静穏時に実施する
+- **main への到達は次回合流時**(main は sekisho-m1 の祖先で、定期合流のマイルストーン先。
+  §5.3 の完了宣言はこの点で「sekisho-m1 到達済み・main 合流待ち」と記す)
