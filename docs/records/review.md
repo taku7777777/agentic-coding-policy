@@ -462,3 +462,6 @@ records 設計への独立レビュー3本(敵対的設計 / 規約整合 / 一�
 
 - 第8版を発行し、注釈付きタグ v8 を付与して push
 - スニペット v8 の再配布(§12.2 の全数): グローバル2枚(`~/.claude/CLAUDE.md`・`~/.codex/AGENTS.md`。diff 一致確認済み)/ wrap.md / preference-analyzer(直接 commit・到達済み)/ co-working-workflow(**PR #6 = `7e6e5d9` で到達済み**。6本への `日付:` 遡及付与を含む)/ **metsuke は PR #18 を作成 —— 本流到達待ち**(レビュー必須のためマージはユーザー操作)
+- **PR #18 は 2026-08-02 にユーザーがマージし本流到達**(metsuke `3cddf26`)。origin/master 上で
+  「AGENTS.md == §11 ブロック」の diff 完全一致を確認した。これをもってスニペット v8 の再配布は
+  §12.2 の全数(グローバル2 + 公開 repo 3 + wrap.md)で**実施済み**となり、第8版の配布は完了
