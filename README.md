@@ -1,4 +1,4 @@
-# agentic-cording-policy
+# agentic-coding-policy
 
 LLMとの作業で生まれる成果物(主に md)の**置き場・権威・寿命**を定める規約。
 
