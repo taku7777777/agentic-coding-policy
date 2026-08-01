@@ -8,10 +8,12 @@ LLMとの作業で生まれる成果物(主に md)の**置き場・権威・寿�
 
 | 読む順 | 文書 | 内容 |
 |---|---|---|
-| 1 | [issue.md](issue.md) | 背景と解決したいこと。当時の記録として凍結 |
+| 1 | [issue.md](docs/records/issue.md) | 背景と解決したいこと。当時の記録として凍結 |
 | 2 | **[policy.md](policy.md)** | **規約の確定形。これだけで運用できる。現行版は冒頭の版表記を参照** |
-| 3 | [proposal.md](proposal.md) | 導出の経緯。規約として読まない |
-| 4 | [review.md](review.md) | 独立レビュー5巡の指摘と裁定。撤回した主張の記録 |
+| 3 | [proposal.md](docs/records/proposal.md) | 導出の経緯。規約として読まない |
+| 4 | [review.md](docs/records/review.md) | 各巡の独立レビューの指摘と裁定。撤回した主張の記録 |
+
+(当時形の記録3本は第7版で `docs/records/` へ移動した —— 規約自身の §8 に従った配置。policy.md §2.1)
 
 ## 導入方法
 
